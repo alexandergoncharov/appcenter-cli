@@ -100,6 +100,25 @@
       "preLaunchTask": "build-sourcemaps"
     },
     {
+      "name": "Codepush Deployment List",
+      "type": "node2",
+      "console": "integratedTerminal",
+      "request": "launch",
+      "program": "${workspaceRoot}/src/index.ts",
+      "cwd": "C://Proj/test12",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "args": [
+        "codepush", "deployment", "list", "-a", "v-algonc/test12"
+      ],
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build-sourcemaps"
+    },
+    {
       "name": "Codepush Rollback",
       "type": "node2",
       "console": "integratedTerminal",

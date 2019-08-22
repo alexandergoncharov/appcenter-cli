@@ -138,6 +138,44 @@
       "preLaunchTask": "build-sourcemaps"
     },
     {
+      "name": "Codepush Deployment Clear",
+      "type": "node2",
+      "console": "integratedTerminal",
+      "request": "launch",
+      "program": "${workspaceRoot}/src/index.ts",
+      "cwd": "C://Proj/test12",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "args": [
+        "codepush", "deployment", "clear", "-a", "v-algonc/test12", "StagingRename"
+      ],
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build-sourcemaps"
+    },
+    {
+      "name": "Codepush Deployment Remove",
+      "type": "node2",
+      "console": "integratedTerminal",
+      "request": "launch",
+      "program": "${workspaceRoot}/src/index.ts",
+      "cwd": "C://Proj/test12",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "args": [
+        "codepush", "deployment", "remove", "-a", "v-algonc/test12", "StagingRename"
+      ],
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build-sourcemaps"
+    },
+    {
       "name": "Codepush Rollback",
       "type": "node2",
       "console": "integratedTerminal",

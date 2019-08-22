@@ -119,6 +119,25 @@
       "preLaunchTask": "build-sourcemaps"
     },
     {
+      "name": "Codepush Deployment Rename",
+      "type": "node2",
+      "console": "integratedTerminal",
+      "request": "launch",
+      "program": "${workspaceRoot}/src/index.ts",
+      "cwd": "C://Proj/test12",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "args": [
+        "codepush", "deployment", "rename", "-a", "v-algonc/test12", "Staging", "StagingRename"
+      ],
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build-sourcemaps"
+    },
+    {
       "name": "Codepush Rollback",
       "type": "node2",
       "console": "integratedTerminal",

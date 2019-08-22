@@ -43,7 +43,7 @@
       "preLaunchTask": "build-sourcemaps"
     },
     {
-      "name": "Codepush release-cordova",
+      "name": "Codepush Release-cordova",
       "type": "node2",
       "console": "integratedTerminal",
       "request": "launch",
@@ -53,7 +53,26 @@
         "--nolazy"
       ],
       "args": [
-        "codepush", "release-cordova", "-a", "v-algonc/test11-android", "-d", "Staging"
+        "codepush", "release-cordova", "-a", "v-algonc/test12", "-d", "Staging"
+      ],
+      "outFiles": [
+        "${workspaceRoot}/dist/**/*.js"
+      ],
+      "sourceMaps": true,
+      "preLaunchTask": "build-sourcemaps"
+    },
+    {
+      "name": "Codepush Rollback",
+      "type": "node2",
+      "console": "integratedTerminal",
+      "request": "launch",
+      "program": "${workspaceRoot}/src/index.ts",
+      "cwd": "C://Proj/test12",
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "args": [
+        "codepush", "rollback", "-a", "v-algonc/test12", "Staging", "--target-release", "v3"
       ],
       "outFiles": [
         "${workspaceRoot}/dist/**/*.js"
